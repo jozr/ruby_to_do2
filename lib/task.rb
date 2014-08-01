@@ -2,10 +2,12 @@ class Task
 
   @@tasks = []
 
-  def initialize(task_name, priority)
-    @task = task_name
+  def initialize(task_name, priority, status, due_date)
+    @task_name = task_name
     @priority = priority
-    @@tasks << self
+    @status = status
+    @due_date = due_date
+
   end
 
   def task_name
@@ -14,6 +16,14 @@ class Task
 
   def priority
     @priority
+  end
+
+  def due_date
+    @due_date
+  end
+
+  def status
+    @status
   end
 
   def save
@@ -29,8 +39,8 @@ class Task
   end
 end
 
-test_task = Task.new("Learn Ruby", 3)
+#test_task = Task.new("Learn Ruby", 3, false, 'Tue Aug 29 05:00:00 PDT 2006')
 
-puts test_task.task_name
+#puts test_task.task_name
 
 

@@ -8,15 +8,15 @@ Shoes.app do
    @title  = banner "Peggy's To Do Lists"
    @title.style  size: 20, stroke: darkblue, margin: 20
 
-    stack margin_left: 5, margin_right: 10, width: 1.0, height: 200, scroll: true do
-      background white
-      border blue, strokewidth: 3
-      @gui_todo = para
-    end
+#    stack margin_left: 5, margin_right: 10, width: 1.0, height: 200, scroll: true do
+ #     background white
+ #     border blue, strokewidth: 3
+ #     @gui_todo = para
+ #   end
 
-   flow margin-top: 200 do
+   flow do
      @press = button "Add List"
-    #  edit_line width: 200, height: 30
+    edit_line width: 200, height: 30
      @press = button "Edit List"
      @press = button "Delete List"
    end

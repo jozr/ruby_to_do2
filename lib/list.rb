@@ -1,5 +1,3 @@
-
-
 class List
   @@lists = []
 
@@ -20,6 +18,20 @@ class List
     @@lists = []
   end
 
+  def List.unique_list(input_list_name)
+    if @@lists = []
+      return true
+    elsif
+      @@lists.each do |list|
+        if input_list_name == @@lists.list_name
+          return false
+        else
+          return true
+        end
+      end
+    end
+  end
+
   def save
     @@lists << self
   end
@@ -31,5 +43,4 @@ class List
   def List.all_lists
     @@lists
   end
-
 end
