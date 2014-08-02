@@ -19,11 +19,15 @@ class List
   end
 
   def List.unique_list(input_list_name)
-    if @@lists = []
+    # puts @@lists.length
+    if @@lists == []
+      # puts "hello"
       return true
     elsif
+      # puts @@lists[0].list_name
       @@lists.each do |list|
-        if input_list_name == @@lists.list_name
+        puts list.list_name
+        if input_list_name == list.list_name
           return false
         else
           return true

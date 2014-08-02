@@ -1,7 +1,7 @@
 require './lib/task.rb'
 require './lib/list.rb'
 require 'chronic'
-require 'pry'
+
   def main_menu
     loop do
       puts "Press 'l' to add a new list"
@@ -28,9 +28,8 @@ require 'pry'
   def add_list
     puts 'Describe a new list:'
     input_list_name = gets.chomp
-    binding.pry
     if List.unique_list(input_list_name)
-      List.new(input_list_name)
+       List.new(input_list_name)
     else
       puts "please choose another list name, this is taken"
     end
